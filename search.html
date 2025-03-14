@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search OldHTML Repository</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="compat.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>OldHTML - Search</h1>
+            <div class="nav-buttons">
+                <a href="index.html">Home</a>
+                <a href="search.html" class="active">Search</a>
+                <div class="theme-toggle-container">
+                    <button id="theme-toggle" title="Toggle Dark/Light Mode">🌓</button>
+                </div>
+                <div class="style-toggle-container">
+                    <button id="style-toggle" title="Toggle Modern/Legacy Style">Legacy View</button>
+                </div>
+            </div>
+            <p><a href="index.html">Return to Home</a></p>
+        </header>
+
+        <div class="search-box">
+            <h3>Search Repository</h3>
+            <label for="advanced-search">Search Term:</label>
+            <input type="text" id="advanced-search" name="advanced-search" size="30">
+            
+            <div class="search-options">
+                <label for="search-type">Search for:</label>
+                <select id="search-type">
+                    <option value="code">Code</option>
+                    <option value="filename">Filename</option>
+                </select>
+            </div>
+            
+            <button onclick="advancedSearch()">Search</button>
+        </div>
+
+        <div class="file-viewer">
+            <h3>File Viewer</h3>
+            <div class="file-viewer-toolbar">
+                <select id="file-selector">
+                    <option value="">Select a file to view</option>
+                </select>
+                <button id="view-file">View File</button>
+            </div>
+            <div id="file-content-container">
+                <div id="file-content"></div>
+            </div>
+        </div>
+
+        <div class="results" id="advanced-results">
+            <!-- Advanced search results will appear here -->
+        </div>
+
+        <div class="browser-detection">
+            <h3>Your Browser</h3>
+            <p id="browser-info">Detecting browser...</p>
+            <div id="compatibility-info">
+                <h4>What this website would look like on:</h4>
+                <ul id="browser-compatibility">
+                    <!-- Browser compatibility info will appear here -->
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p>OldHTML Project by <a href="https://github.com/DaDevMikey">DaDevMikey</a></p>
+            <p><a href="https://github.com/DaDevMikey/OldHTML">View on GitHub</a></p>
+        </footer>
+    </div>
+    <script src="search.js"></script>
+</body>
+</html>
