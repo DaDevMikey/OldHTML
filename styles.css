@@ -1,0 +1,317 @@
+/* Base styles for all browsers */
+body {
+    font-family: serif;
+    margin: 0;
+    padding: 10px;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #000000;
+    padding: 10px;
+}
+
+header {
+    border-bottom: 2px solid #000000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 18px;
+    margin: 5px 0 0 0;
+}
+
+h3 {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.intro {
+    margin-bottom: 20px;
+}
+
+.search-box {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #000000;
+}
+
+input, button, select {
+    margin: 5px 0;
+}
+
+.repo-info, .results, .file-viewer {
+    border: 1px solid #000000;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.file-viewer-toolbar {
+    margin-bottom: 10px;
+}
+
+#file-content-container {
+    border: 1px solid #000000;
+    padding: 10px;
+    height: 400px;
+    overflow: auto;
+}
+
+.nav-buttons {
+    display: none; /* Hidden in legacy browsers */
+}
+
+footer {
+    margin-top: 20px;
+    border-top: 1px solid #000000;
+    padding-top: 10px;
+    text-align: center;
+}
+
+/* Modern browsers only - will be ignored by old browsers */
+@media screen {
+    /* Enhanced styles for modern browsers */
+    body.modern {
+        font-family: 'Roboto', Arial, sans-serif;
+        background-color: #f9fafb;
+        color: #1f1f1f;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Dark mode */
+    body.modern.dark-theme {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+
+    body.modern .container {
+        max-width: 1000px;
+        border: none;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        border-radius: 24px;
+        padding: 20px;
+        background-color: #ffffff;
+        transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    body.modern.dark-theme .container {
+        background-color: #1e1e1e;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    body.modern header {
+        background-color: #1a73e8;
+        color: white;
+        padding: 20px;
+        margin: -20px -20px 24px -20px;
+        border-radius: 24px 24px 0 0;
+        display: flex;
+        flex-direction: column;
+        transition: background-color 0.3s;
+    }
+
+    body.modern.dark-theme header {
+        background-color: #0d47a1;
+    }
+
+    body.modern .nav-buttons {
+        display: flex;
+       !        margin-top: 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 12px;
+    }
+
+    body.modern .nav-buttons a {
+        color: white;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 20px;
+        margin-right: 8px;
+        font-weight: 500;
+        transition: background-color 0.2s;
+    }
+
+    body.modern .nav-buttons a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    body.modern .nav-buttons a.active {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    body.modern button {
+        background-color: #1a73e8;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        border-radius: 20px;
+        font-weight: 500;
+        transition: background-color 0.2s, transform 0.1s;
+    }
+
+    body.modern.dark-theme button {
+        background-color: #90caf9;
+        color: #121212;
+    }
+
+    body.modern button:hover {
+        background-color: #1765cc;
+        transform: translateY(-1px);
+    }
+
+    body.modern.dark-theme button:hover {
+        background-color: #64b5f6;
+    }
+
+    body.modern input, 
+    body.modern select {
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        background-color: #f5f5f5;
+        transition: border 0.2s, background-color 0.2s;
+    }
+
+    body.modern.dark-theme input,
+    body.modern.dark-theme select {
+        background-color: #333;
+        border-color: #444;
+        color: #e0e0e0;
+    }
+
+    body.modern input:focus,
+    body.modern select:focus {
+        border-color: #1a73e8;
+        outline: none;
+        background-color: #fff;
+    }
+
+    body.modern.dark-theme input:focus,
+    body.modern.dark-theme select:focus {
+        border-color: #90caf9;
+        background-color: #3a3a3a;
+    }
+
+    body.modern .search-box, 
+    body.modern .repo-info, 
+    body.modern .results,
+    body.modern .file-viewer,
+    body.modern .browser-detection {
+        border: none;
+        background-color: white;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        border-radius: 16px;
+        margin-bottom: 24px;
+        padding: 20px;
+        transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    body.modern.dark-theme .search-box, 
+    body.modern.dark-theme .repo-info, 
+    body.modern.dark-theme .results,
+    body.modern.dark-theme .file-viewer,
+    body.modern.dark-theme .browser-detection {
+        background-color: #2d2d2d;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    body.modern #file-content-container {
+        border: 1px solid #eee;
+        border-radius: 12px;
+        background-color: #f9f9f9;
+        transition: background-color 0.3s, border 0.3s;
+    }
+
+    body.modern.dark-theme #file-content-container {
+        border-color: #444;
+        background-color: #1a1a1a;
+    }
+
+    /* Theme and style toggle buttons */
+    body.modern .theme-toggle-container,
+    body.modern .style-toggle-container {
+        margin-left: auto;
+    }
+
+    body.modern #theme-toggle {
+        background-color: transparent;
+        font-size: 18px;
+        padding: 6px 10px;
+    }
+
+    body.modern #style-toggle {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Legacy style mode for modern browsers */
+    body.modern.legacy-style {
+        font-family: serif;
+        background-color: #FFFFFF;
+    }
+
+    body.modern.legacy-style .container {
+        border: 1px solid #000000;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: #FFFFFF;
+    }
+
+    body.modern.legacy-style header {
+        background-color: transparent;
+        color: #000000;
+        padding: 10px;
+        margin: 0;
+        border-radius: 0;
+        border-bottom: 2px solid #000000;
+    }
+
+    body.modern.legacy-style .nav-buttons {
+        display: flex;
+        border-top: 1px solid #000000;
+    }
+
+    body.modern.legacy-style .nav-buttons a {
+        color: #000000;
+    }
+
+    body.modern.legacy-style button {
+        background-color: #d3d3d3;
+        color: #000000;
+        border: 1px solid #000000;
+        border-radius: 0;
+    }
+
+    body.modern.legacy-style input,
+    body.modern.legacy-style select {
+        border: 1px solid #000000;
+        border-radius: 0;
+        background-color: #FFFFFF;
+    }
+
+    body.modern.legacy-style .search-box, 
+    body.modern.legacy-style .repo-info, 
+    body.modern.legacy-style .results,
+    body.modern.legacy-style .file-viewer,
+    body.modern.legacy-style .browser-detection {
+        border: 1px solid #000000;
+        background-color: #FFFFFF;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    body.modern.legacy-style #file-content-container {
+        border: 1px solid #000000;
+        border-radius: 0;
+        background-color: #FFFFFF;
+    }
+}
